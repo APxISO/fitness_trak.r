@@ -5,6 +5,7 @@
 
 nav {
     margin: 0;
+    padding: 0;
     background: var(--color-primary);
     width: 100vw;
     height: 4.5rem;
@@ -23,6 +24,7 @@ nav button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .avatar {
@@ -46,6 +48,8 @@ nav button {
     display: flex;
     align-items: center;
     gap: 4rem;
+    list-style-type: none;
+    margin-right: 20px;
 }
 
 .nav__profile {
@@ -63,12 +67,14 @@ nav button {
     visibility: hidden;
     opacity: 0;
     transition: var(--transition);
+    list-style-type: none;
 }
 
 /* show nav ul when nav profile is hovered */
 .nav__profile:hover > ul {
     visibility: visible;
     opacity: 1;
+    
 }
 
 .nav__profile ul li a {
@@ -76,6 +82,7 @@ nav button {
     background: var(--color-gray-900);
     display: block;
     width: 100%;
+    
 }
 
 .nav__profile ul li:last-child a {
