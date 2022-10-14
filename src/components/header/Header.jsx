@@ -4,7 +4,7 @@ import './header.css'
 function Header() {
 return (
     <nav>
-<div className="nav__container">
+<div className="container nav__container">
             <a href="" className="nav__logo">Fitness Trak.r</a>
             <ul className="nav__items">
                 <li><a href="">Home</a></li>

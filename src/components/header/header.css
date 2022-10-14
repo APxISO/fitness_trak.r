@@ -6,7 +6,7 @@
 nav {
     margin: 0;
     padding: 0;
-    background: var(--color-primary);
+    background: transparent;
     width: 100vw;
     height: 4.5rem;
     position: fixed;
@@ -27,17 +27,17 @@ nav button {
     
 }
 
-.avatar {
+/* .avatar {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
     overflow: hidden;
     border: 0.3rem solid var(--color-bg);
-}
+} */
 
 .nav__logo {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     font-family: "Megrim";
     color: aqua;
     text-shadow: 0 0 5px white;
@@ -50,6 +50,12 @@ nav button {
     gap: 4rem;
     list-style-type: none;
     margin-right: 20px;
+    
+}
+
+.nav__items a {
+    color: aqua;
+    font-size: 1.25rem;
 }
 
 .nav__profile {
