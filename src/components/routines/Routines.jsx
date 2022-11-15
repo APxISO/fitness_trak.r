@@ -1,60 +1,99 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, Link} from 'react'
 import './routines.css'
-import {Link} from 'react-router-dom';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 
-const Routines = ({token, user, routines}) => {
+const url = `https://fitnesstrac-kr.herokuapp.com/api/routines`;
+
+
+
+
+
+const Routines = ({token, user}) => {
+
+  const [routines, setRoutines] = useState([]);
+  const [data, setData] = useState(null);
+
+
+useEffect(() => {
+  const fetchRoutines = async () => {
+  const resp =await fetch (url);
+  const data = await resp.json();
+  setRoutines(data);
+}
+  fetchRoutines(data);
+}, [])
+
+
+
     return (
-        <>
-        <Header/>
-          <div className="home_card">
-  <div className="home_content">
-    <div className='home_card_options'>
-        <h1>Rountines</h1>
-        {user ? (
-        <Link to="/MyRoutines">See My Routines</Link>
-      ) : (
-        "Login to see my routines"
-      )}
-        <div>
-        {routines.map((routine) => {
-          if (routine.isPublic) {
-            return (
-              <div className="routinesCard" key={routine.id}>
-                <h2>{routine.name}:</h2>
-                <h4>Goal: {routine.goal}</h4>
-                <h5>Creator: {routine.creatorName}</h5>
-                <div>
-                  {routine.activities.map((activity) => {
-                    return (
-                      <div key={activity.id}>
-                        <h1>Activity: {activity.name}</h1>
-                        <h4>Duration: {activity.duration}</h4>
-                        <h4>Count: {activity.count}</h4>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          }
-        })}
-      </div>
         
-
-
-
-
-
-
+      <div className='routines_page_containter'>
+        <div className='routines_top_cont'>
+            <div className='routines_top_center'>
+                <h1>Routines</h1>
+            </div>
+        {user ? (
+        <button className='btn'><Link to="/MyRountines">See My Rountines</Link></button>
+        ) : (
+        <div className='act_top_right'>
+            <button className='btn'>Login to See Your Routines</button>
         </div>
-  
-  
-  </div>
-  </div>
-  <Footer/>
-        </>
+        )}
+        </div>  
+
+        <div className='routines_container'>
+            {routines.map(routines => {
+              if (routines.isPublic){
+                return (
+                  <div className='routines_card' key={routines.id} >
+                    <h3>{routines.creatorName}</h3>
+                    <h2>{routines.name}</h2>
+                    <p>Goal: {routines.goal}</p>
+                    <div className='creator_activities'>
+                    {routines.activities.map((activities)=> {
+                      return (
+                        <>
+                        <h3>Activity: {activities.name}</h3>
+                        <h5>
+                          {" "}
+                          Duration: {activities.duration} Count: {activities.count}
+
+                        </h5>
+                        <br/>
+                        </>
+                      );
+
+                    })}
+                  </div>
+                  
+                  </div>
+                  
+                  
+
+                 
+                 
+                  )
+                    }
+                
+            })}
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
       );
 }
 

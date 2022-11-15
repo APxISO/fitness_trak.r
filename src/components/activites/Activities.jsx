@@ -7,7 +7,7 @@ const url = `https://fitnesstrac-kr.herokuapp.com/api/activities`;
 const Activities = ({routines, user, activites}) => {
     const [activities, setActivities] = useState([])
     const [data, setData] = useState(null);
-    console.log('activities: ', activities)
+    
     
     
     
@@ -17,7 +17,7 @@ useEffect(() => {
         const data = await resp.json();
         setActivities(data);
     }
-    fetchActivities();
+    fetchActivities(data);
 }, [])
 
 
@@ -29,10 +29,10 @@ useEffect(() => {
                 <h1>Activities</h1>
             </div>
         {user ? (
-        <button className='btn'><Link to="/MyActivities">Create new activity</Link></button>
+        <button className='btn'><Link to="/MyActivities">Create New Activity</Link></button>
         ) : (
         <div className='act_top_right'>
-            <button className='btn'>Login to create activities</button>
+            <button className='btn'>Login to Create Activity</button>
         </div>
         )}
         </div>
