@@ -47,19 +47,19 @@ useEffect(() => {
               if (routines.isPublic){
                 return (
                   <div className='routines_card' key={routines.id} >
-                    <h3>{routines.creatorName}</h3>
+                    <h1>{routines.creatorName}</h1>
                     <h2>{routines.name}</h2>
-                    <p>Goal: {routines.goal}</p>
+                    <h3>Goal: {routines.goal}</h3>
                     <div className='creator_activities'>
                     {routines.activities.map((activities)=> {
                       return (
                         <>
                         <h3>Activity: {activities.name}</h3>
-                        <h5>
+                        <h4>
                           {" "}
                           Duration: {activities.duration} Count: {activities.count}
 
-                        </h5>
+                        </h4>
                         <br/>
                         </>
                       );
