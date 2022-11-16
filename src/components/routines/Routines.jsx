@@ -17,9 +17,21 @@ const Routines = ({token, user}) => {
 
 useEffect(() => {
   const fetchRoutines = async () => {
-  const resp =await fetch (url);
+  const resp =await fetch (url, 
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+    
+    );
+    if (!resp.ok){
+      throw new Error(`HTTP error! status: ${resp.status}`)
+    }
   const data = await resp.json();
   setRoutines(data);
+
 }
   fetchRoutines(data);
 }, [])
