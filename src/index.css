@@ -45,7 +45,7 @@ body {
     line-height: 1.6;
     color: var(--color-gray-200);
     overflow: hidden;
-    background-image: url('https://4kwallpapers.com/images/wallpapers/workout-limitless-endurance-gym-colorful-smoke-3556x2000-929.jpg');
+    background-color: white;
     background-size: cover;
     font-size: 0.9rem;
 }

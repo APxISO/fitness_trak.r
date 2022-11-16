@@ -47,12 +47,13 @@ const App = () => {
   
   return (
     <>
-    {/* <Activities/> */}
-        {/* <Header/>
+    
+        <Header/>
         <Home/>
-        <Footer/> */}
+      {/* <Activities/>     */}
         {/* <Routines/> */}
-        <Register/>
+        {/* <Register/> */}
+        <Footer/>
     </>
   )
 }
