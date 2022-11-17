@@ -8,6 +8,7 @@ import Routines from "./components/routines/Routines";
 // import Activities from "./components/activites/Activities";
 // import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import Login from "./components/login/Login";
 export const url = "https://fitnesstrac-kr.herokuapp.com/api";
 
 
@@ -49,10 +50,11 @@ const App = () => {
     <>
     
         <Header/>
-        <Home/>
+        {/* <Home/> */}
       {/* <Activities/>     */}
         {/* <Routines/> */}
         {/* <Register/> */}
+        <Login/>
         <Footer/>
     </>
   )

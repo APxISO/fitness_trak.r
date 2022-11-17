@@ -1,7 +1,8 @@
 
 body{
-    background-image: url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?cs=srgb&dl=pexels-leon-ardho-1552242.jpg&fm=jpg&_gl=1*mw0hw2*_ga*NTQ3Njk4NjgxLjE2Njg2MjAzMzQ.*_ga_8JE65Q40S6*MTY2ODYyMDMzNS4xLjEuMTY2ODYyMDM0My4wLjAuMA..');
-}
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60), url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?cs=srgb&dl=pexels-leon-ardho-1552242.jpg&fm=jpg&_gl=1*mw0hw2*_ga*NTQ3Njk4NjgxLjE2Njg2MjAzMzQ.*_ga_8JE65Q40S6*MTY2ODYyMDMzNS4xLjEuMTY2ODYyMDM0My4wLjAuMA..') );
+    
+} 
 
 
 .form_container h1{
