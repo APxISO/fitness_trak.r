@@ -8,17 +8,15 @@ const Activities = ({routines, user, activites}) => {
     const [activities, setActivities] = useState([])
     const [data, setData] = useState(null);
     
+    useEffect(() => {
+        const fetchActivities = async () => {
+            const resp = await fetch (url);
+            const data = await resp.json();
+            setActivities(data);
+        }
+        fetchActivities(data);
+    }, [])
     
-    
-    
-useEffect(() => {
-    const fetchActivities = async () => {
-        const resp = await fetch (url);
-        const data = await resp.json();
-        setActivities(data);
-    }
-    fetchActivities(data);
-}, [])
 
 
     return (

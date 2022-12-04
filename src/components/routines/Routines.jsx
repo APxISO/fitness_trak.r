@@ -1,7 +1,5 @@
 import React, { useState, useEffect, Link} from 'react'
 import './routines.css'
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
 
 const url = `https://fitnesstrac-kr.herokuapp.com/api/routines`;
 
