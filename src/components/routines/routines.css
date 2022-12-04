@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
 
-body {
+/* body {
     background-image: url('https://images.pexels.com/photos/17840/pexels-photo.jpg?cs=srgb&dl=pexels-binyamin-mellish-17840.jpg&fm=jpg&_gl=1*3uhg3u*_ga*NTQ3Njk4NjgxLjE2Njg2MjAzMzQ.*_ga_8JE65Q40S6*MTY2ODYyMDMzNS4xLjEuMTY2ODYyMDU0Ni4wLjAuMA..')
-  }
+  } */
 
 
 
@@ -21,7 +21,6 @@ body {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
     color: white;
     text-decoration: underline;
 }

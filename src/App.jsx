@@ -1,4 +1,5 @@
-import React, {useState, useEffect, Link} from "react";
+import React, {useState, useEffect, Link,} from "react";
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Activities from "./components/activites/Activities";
 // import { Link, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
@@ -9,7 +10,11 @@ import Routines from "./components/routines/Routines";
 // import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
+// import MyRoutines from "./components/myRoutines/MyRoutines";
 export const url = "https://fitnesstrac-kr.herokuapp.com/api";
+
+
+
 
 
 
@@ -48,13 +53,32 @@ const App = () => {
   
   return (
     <>
-    
-        <Header/>
-        {/* <Home/> */}
-      {/* <Activities/>     */}
-        {/* <Routines/> */}
-        {/* <Register/> */}
-        <Login/>
+      <Header/>
+        <HashRouter>
+          <Routes>
+            <Route exact path="/" element={<Home user={user} />} />
+            <Route
+                    exact
+                    path="/register"
+                    element={<Register setToken={setToken} />}
+            />
+            <Route
+                    exact
+                    path="/login"
+                    element={
+                        <Login
+                            setUser={setUser}
+                            user={user}
+                            setToken={setToken}
+                            fetchUser={fetchUser}
+                        />
+                    }
+                />
+                
+           </Routes>
+           
+     </HashRouter>
+        
         <Footer/>
     </>
   )

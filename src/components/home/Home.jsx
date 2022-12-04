@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.css'
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Home = ({user}) => {
     return (
@@ -13,12 +13,12 @@ const Home = ({user}) => {
         <h3>If you are a new user, set up your account below</h3>
 
 
-        <button className='btn'>Register</button>
+        <button className='btn'><Link to="/register">Register</Link></button>
         <h3>Already Have An Account?</h3>
-        <button className='btn'>Login</button>
+        <button className='btn'><Link to="/login">Login</Link></button>
         <h3>Proceed As A Guest.</h3>
         
-        <button className='btn'>View Activities</button>
+        <button className='btn'><Link to="/activities">View Activities</Link></button>
         
         </div>
   
