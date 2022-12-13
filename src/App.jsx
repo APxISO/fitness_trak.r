@@ -5,11 +5,8 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Routines from "./components/routines/Routines";
-// import Activities from "./components/activites/Activities";
-// import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
-// import MyRoutines from "./components/myRoutines/MyRoutines";
 export const url = "https://fitnesstrac-kr.herokuapp.com/api";
 
 

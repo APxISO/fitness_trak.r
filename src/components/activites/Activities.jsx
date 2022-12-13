@@ -4,7 +4,7 @@ import './activities.css'
 const url = `https://fitnesstrac-kr.herokuapp.com/api/activities`;
 
 
-const Activities = ({routines, user, activites}) => {
+const Activities = ({routines, user}) => {
     const [activities, setActivities] = useState([])
     const [data, setData] = useState(null);
     
